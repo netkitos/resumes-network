@@ -1,0 +1,49 @@
+## 🌐 Domínio de Broadcast
+
+Um **domínio de broadcast** é o conjunto de dispositivos que recebem quadros enviados para o endereço de broadcast.
+
+- Em **hubs** e **switches sem VLANs**, todas as portas fazem parte do mesmo domínio de broadcast.
+- **Roteadores** separam domínios de broadcast: cada interface é um domínio distinto.
+- **VLANs** também podem segmentar o domínio de broadcast, criando redes lógicas independentes.
+
+📌 **Analogia:**  
+É como uma sala cheia de pessoas. Se alguém grita “atenção todos!”, todos escutam.  
+Se dividirmos a sala em várias salas (roteadores ou VLANs), o grito só será ouvido naquela sala.
+
+## 🔀 Domínio de Colisão
+
+Um **domínio de colisão** é a área da rede onde dois dispositivos podem transmitir ao mesmo tempo e gerar colisão.
+
+- Em **hubs (half-duplex)**, todos compartilham o mesmo meio → **um único domínio de colisão**.
+- Em **switches modernos (full-duplex)**, cada porta é um domínio separado → **sem colisões**.
+
+📌 **Analogia:**  
+- Estrada de mão única (hub): dois carros colidem.  
+- Estrada de mão dupla (switch): cada carro segue no seu espaço, sem colisão.
+
+## ⚡ CSMA/CD (Carrier Sense Multiple Access with Collision Detection)
+
+O **CSMA/CD** é o protocolo usado no **Ethernet half-duplex** para controlar o acesso ao meio físico.  
+
+### Como funciona:
+1. **Carrier Sense** → o dispositivo "escuta" o meio antes de transmitir.  
+2. **Multiple Access** → vários dispositivos podem acessar o mesmo meio.  
+3. **Collision Detection** → se dois transmitem ao mesmo tempo:  
+   - Ambos detectam a colisão.  
+   - Enviam um **jam signal** (ruído).  
+   - Esperam um tempo aleatório (**backoff exponencial**) e retransmitem.  
+
+📌 **Exemplo prático:**  
+É como falar no walkie-talkie: todos escutam antes de falar.  
+Se duas pessoas falam juntas, ocorre interferência, elas param e tentam de novo.
+
+## ✅ Resumo Rápido
+
+- **Domínio de Broadcast:** quem ouve mensagens de broadcast. Separado por roteadores ou VLANs.  
+- **Domínio de Colisão:** quem pode causar colisões no meio físico. Switches modernos (full-duplex) eliminam colisões.  
+- **CSMA/CD:** protocolo que regula o acesso ao meio na Ethernet antiga (half-duplex).  
+
+---
+
+✍️ **Lucas Miguel:** Estudante de Redes  
+📚 **Baseado em:** Tanenbaum - *Redes de Computadores* e **Hackone Pro - Trilha de Redes**
