@@ -1,4 +1,4 @@
-## 🌐 Domínio de Broadcast
+# 🌐 Domínio de Broadcast
 
 Um **domínio de broadcast** é o conjunto de dispositivos que recebem quadros enviados para o endereço de broadcast.
 
